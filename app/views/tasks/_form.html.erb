@@ -1,3 +1,11 @@
+<div class="container">
+<div class="row">
+  <div class="col-xs-12">
+  <div class="col-sm-offset-2 col-sm-8">
+  <div class="col-lg-offset-3 col-lg-6">
+
+
+
 <%= form_for(task) do |f| %>
 
 <% if task.errors.any? %>
@@ -12,18 +20,25 @@
 
 <% end %>
 
-<%= f.label :content, 'タスク' %>
+<div class="form-group">
+      
+      <%= f.label :contetn, 'タスク' %>
+      <%= f.text_field :content, class: 'form-control' %>
+  </div>
 
-<%= f.text_field :content %>
+ <div class="form-group">
+ 
+     <%= f.label :status, 'ステータス' %>
+     <%= f.text_field :status, class: 'form-control' %>
+  </div>
 
-
-  
-<%= f.label :status, 'ステータス' %>
-
-<%= f.text_field :status %>
-
-
-  
 <%= f.submit '投稿' %>
 
 <% end %>
+
+    </div>
+
+   </div>
+  </div>
+ </div>
+</div>
