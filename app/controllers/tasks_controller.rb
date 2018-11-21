@@ -18,7 +18,7 @@ class TasksController < ApplicationController
       flash[:success] = 'Task が追加されました'
       redirect_to @task
     else
-      flash.now[:danger] = 'Task が追加されませんでした'
+      flash.now[:danger] = 'Task は追加されませんでした'
       render :new
     end
   end
@@ -30,7 +30,7 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     if @task.update(task_params)
-      flash[:sucsess] = 'Task は更新されました'
+      flash[:success] = 'Task が更新されました'
       redirect_to @task
     else
       flash.now[:danger] = 'Task は更新されませんでした'
